@@ -1,5 +1,5 @@
 {
-    "name": "paas-static-nama-siswa",
+    "name": "paas-static-cloudflare",
     "compatibility_date": "2026-09-29",
     "assets": {
     "directory": "./public"
