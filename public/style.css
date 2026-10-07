@@ -1,0 +1,163 @@
+/* Reset & Variabel CSS untuk kemudahan pengaturan warna */
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #3b82f6;
+    --bg-color: #f8fafc;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Bagian Hero / Header */
+.hero {
+    background: linear-gradient(135deg, var(--bg-color) 0%, #e0e7ff 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Efek Teks Gradien pada Nama */
+.highlight {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tombol / Button Modern */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px; /* Membuat tombol berbentuk pil */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px); /* Efek melayang */
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+/* Bagian Section Global */
+section {
+    padding: 100px 0;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+/* Section Tentang Saya */
+.about p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Card Portofolio */
+.portfolio .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Responsivitas untuk layar HP */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
